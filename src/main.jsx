@@ -9,6 +9,7 @@ import plainIconUrl from './assets/icon-cheese-plain.svg';
 import friesIconUrl from './assets/icon-cheese-fries.svg';
 import potatoesIconUrl from './assets/icon-cheese-potatoes.svg';
 import bunIconUrl from './assets/icon-cheese-bun.svg';
+import sideUnknownIconUrl from './assets/icon-cheese-side-unknown.svg';
 import unknownIconUrl from './assets/icon-cheese-unknown.svg';
 
 // Fix the default Leaflet marker assets so they work correctly when the app is
@@ -25,11 +26,24 @@ const restaurantIconMap = {
   fries: friesIconUrl,
   potatoes: potatoesIconUrl,
   bun: bunIconUrl,
+  sideUnknown: sideUnknownIconUrl,
   unknown: unknownIconUrl,
 };
 
 const getRestaurantIconType = (restaurant) => {
   const description = `${restaurant?.dish ?? ''} ${restaurant?.side_details ?? ''}`.toLowerCase();
+  const sideDetail = `${restaurant?.side_details ?? ''}`.toLowerCase();
+  const hasSideIncluded = restaurant?.with_side === true;
+  const hasGenericSide =
+    sideDetail.includes('příloha') ||
+    sideDetail.includes('priloha') ||
+    sideDetail.includes('standardní příloha') ||
+    sideDetail.includes('standardni priloha') ||
+    sideDetail.includes('dle výběru') ||
+    sideDetail.includes('dle vyberu') ||
+    sideDetail.includes('podle menu') ||
+    sideDetail.includes('součást ceny') ||
+    sideDetail.includes('soucast ceny');
 
   if (description.includes('bulka') || description.includes('v bulce') || description.includes('chléb')) {
     return 'bun';
@@ -41,6 +55,10 @@ const getRestaurantIconType = (restaurant) => {
 
   if (description.includes('hranol') || description.includes('fries')) {
     return 'fries';
+  }
+
+  if (hasSideIncluded && hasGenericSide) {
+    return 'sideUnknown';
   }
 
   if (description.includes('smažený sýr') && restaurant?.with_side === false) {

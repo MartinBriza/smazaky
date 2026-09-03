@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <g stroke="#1F2937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- smažený sýr -->
+    <path d="M10 47c1-9 7-14 15-14h24c8 0 14 5 15 14l3 31c1 9-5 16-14 16H22c-9 0-15-7-14-16l2-31Z"
+          fill="#F6C453"/>
+    <path d="M15 56c8-4 24-4 35 0M16 72c9-3 21-3 30 0M23 84c6-2 13-2 19 0"
+          stroke="#E9A93B"/>
+    <path d="M20 43l3-2M38 39l3 2M50 49l3-1M28 64l3-2M47 77l3 1"
+          stroke="#B9782C" stroke-width="4"/>
+    <circle cx="35" cy="52" r="2" fill="#FFFDF8" stroke="#B9782C" stroke-width="2"/>
+
+    <!-- smažený otazník jako neznámá příloha -->
+    <path d="M82 43c0-10 7-17 17-17 10 0 18 7 18 17 0 8-4 13-11 18-5 4-7 7-7 12v2H87v-4c0-9 5-15 12-19 4-3 7-5 7-9 0-4-3-6-7-6-5 0-7 3-8 8l-9-2Z"
+          fill="#F6C453"/>
+    <circle cx="94" cy="101" r="7" fill="#F6C453"/>
+
+    <!-- křupavá strouhanka -->
+    <path d="M85 35c3-4 7-7 12-8M104 31c4 2 7 5 8 9M111 48c1 3 0 6-2 8"
+          stroke="#E9A93B"/>
+    <path d="M87 51l3-1M101 46l3-2M91 66l3 1M106 63l3-2M91 83l3-1"
+          stroke="#B9782C" stroke-width="4"/>
+    <circle cx="101" cy="55" r="2" fill="#FFFDF8" stroke="#B9782C" stroke-width="2"/>
+
+    <!-- oddělení / malé drobky -->
+    <circle cx="68" cy="91" r="2.5" fill="#E9A93B" stroke="none"/>
+    <circle cx="74" cy="98" r="2" fill="#B9782C" stroke="none"/>
+  </g>
+</svg>
