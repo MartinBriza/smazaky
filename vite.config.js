@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 // We expose the server on 0.0.0.0 so it is reachable from the local network,
 // and set the default port to 5173 for consistency.
 export default defineConfig({
+  base: '/smazaky/',
   plugins: [react()],
   server: {
     host: '0.0.0.0',
