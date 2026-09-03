@@ -1,14 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Vite configuration for a small React app served locally during development.
-// We expose the server on 0.0.0.0 so it is reachable from the local network,
-// and set the default port to 5173 for consistency.
+// The app can be served from a subpath (for example /smazaky/), so we use a
+// relative base to avoid broken asset URLs when the site is not mounted at the
+// server root. This keeps the map and list app working reliably in both local
+// dev and GitHub Pages deployments.
 export default defineConfig({
-  base: '/smazaky/',
+  base: './',
   plugins: [react()],
   server: {
     host: '0.0.0.0',
     port: 5173,
+    strictPort: false,
   },
 });
