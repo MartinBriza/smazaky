@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+/dist/
+/build/
+
+# Vite cache
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# GitHub Pages deployment artifacts (optional if not intentionally tracked)
+*.local
+
+# Keep only the app source and data files tracked by default
+# The dataset and app source are intentionally committed.

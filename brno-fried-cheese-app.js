@@ -2487,5 +2487,10 @@ const restaurants = [
   }
 ];
 
-module.exports = { restaurants };
-module.exports.default = restaurants;
+export { restaurants };
+export default restaurants;
+
+if (typeof module !== 'undefined') {
+  module.exports = { restaurants };
+  module.exports.default = restaurants;
+}
